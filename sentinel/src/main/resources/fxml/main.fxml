@@ -17,19 +17,19 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-spacing: 50;" HBox.hgrow="ALWAYS">
                <children>
-                  <TextField alignment="TOP_LEFT" promptText="Rechercher">
+                  <TextField fx:id="search" alignment="TOP_LEFT" promptText="Rechercher">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                   </TextField>
                   <Separator prefWidth="200.0" />
-                  <Button mnemonicParsing="false" text="Nouvelle Entrée" />
-                  <Button mnemonicParsing="false" text="Editer Entrée" />
-                  <Button mnemonicParsing="false" text="Supprimer Entrée" />
+                  <Button fx:id="newMDP" mnemonicParsing="false" text="Nouvelle Entrée" />
+                  <Button fx:id="editMDP" mnemonicParsing="false" text="Editer Entrée" />
+                  <Button fx:id="deleteMDP" mnemonicParsing="false" text="Supprimer Entrée" />
                </children>
             </VBox>
             <Separator orientation="VERTICAL" prefHeight="200.0" />
-            <TableView prefHeight="900.0" prefWidth="1001.0" HBox.hgrow="ALWAYS">
+            <TableView fx:id="table" prefHeight="900.0" prefWidth="1001.0" HBox.hgrow="ALWAYS">
               <columns>
                   <TableColumn editable="false" prefWidth="75.0" text="Titre" />
                 <TableColumn editable="false" prefWidth="75.0" text="Login" />
