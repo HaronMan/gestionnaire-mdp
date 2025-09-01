@@ -1,1 +1,5 @@
-target/
+# Fichiers
+sentinel/src/main/resources/mdp.json
+
+# Dossiers
+sentinel/target/
