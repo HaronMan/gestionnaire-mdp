@@ -23,15 +23,20 @@
                      </opaqueInsets>
                   </TextField>
                   <Separator prefWidth="200.0" />
-                  <Button fx:id="newMDP" mnemonicParsing="false" onAction="#newEntry" text="Nouvelle Entrée">
+                  <Button fx:id="openMDP" layoutX="133.0" layoutY="437.0" mnemonicParsing="false" onAction="#openFile" text="Ouvrir Fichier">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="newMDP" disable="true" mnemonicParsing="false" onAction="#newEntry" text="Nouvelle Entrée">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="editMDP" mnemonicParsing="false" onAction="#editEntry" text="Editer Entrée">
+                  <Button fx:id="editMDP" disable="true" mnemonicParsing="false" onAction="#editEntry" text="Editer Entrée">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="deleteMDP" mnemonicParsing="false" onAction="#deleteEntry" text="Supprimer Entrée">
+                  <Button fx:id="deleteMDP" disable="true" mnemonicParsing="false" onAction="#deleteEntry" text="Supprimer Entrée">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
