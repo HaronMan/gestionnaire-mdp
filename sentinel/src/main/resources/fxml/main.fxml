@@ -28,15 +28,15 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="newMDP" mnemonicParsing="false" onAction="#newEntry" text="Nouvelle Entrée">
+                  <Button fx:id="newMDP" disable="true" mnemonicParsing="false" onAction="#newEntry" text="Nouvelle Entrée">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="editMDP" mnemonicParsing="false" onAction="#editEntry" text="Editer Entrée">
+                  <Button fx:id="editMDP" disable="true" mnemonicParsing="false" onAction="#editEntry" text="Editer Entrée">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button fx:id="deleteMDP" mnemonicParsing="false" onAction="#deleteEntry" text="Supprimer Entrée">
+                  <Button fx:id="deleteMDP" disable="true" mnemonicParsing="false" onAction="#deleteEntry" text="Supprimer Entrée">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>

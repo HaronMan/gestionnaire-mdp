@@ -14,10 +14,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
 
 public class MainController {
-    
+    @FXML
     public Button openMDP;
+    @FXML
     public Button newMDP;
+    @FXML
     public Button editMDP;
+    @FXML
     public Button deleteMDP;
 
     @FXML
@@ -33,6 +36,9 @@ public class MainController {
     @FXML
     private TableColumn<MotDePasse, String> note;
 
+    // Si un fichier est ouvert
+    public boolean file;
+
     public void openFile() throws IOException {
         FileChooser fc = new FileChooser();
         fc.setTitle("Ouvrir un fichier");
@@ -46,7 +52,9 @@ public class MainController {
 
         File fichier = fc.showOpenDialog(openMDP.getScene().getWindow());
         if (fichier != null) {
-
+            file = true;
+            updateBoutons();
+            
             // Lecture fichier
             ObservableList<MotDePasse> mdps = FichierUtils.getMdpsFromFichier(fichier);
             table.setItems(mdps);
@@ -67,10 +75,19 @@ public class MainController {
 
     @FXML
     private void initialize() {
+        file = false;
+        updateBoutons();
+
         titre.setCellValueFactory(new PropertyValueFactory<>("titre"));
         login.setCellValueFactory(new PropertyValueFactory<>("login"));
         mdp.setCellValueFactory(new PropertyValueFactory<>("mdp"));
         url.setCellValueFactory(new PropertyValueFactory<>("url"));
         note.setCellValueFactory(new PropertyValueFactory<>("note"));
+    }
+
+    private void updateBoutons() {
+        newMDP.setDisable(!file);
+        editMDP.setDisable(!file);
+        deleteMDP.setDisable(!file);
     }
 }
