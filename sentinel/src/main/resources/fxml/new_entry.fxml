@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.haronman.sentinel.controller.NewEntryController">
    <children>
       <VBox alignment="CENTER" prefHeight="700.0" prefWidth="500.0">
@@ -22,7 +21,7 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" style="-fx-spacing: 20;">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Titre :" />
-                  <TextField fx:id="title" alignment="TOP_LEFT" HBox.hgrow="ALWAYS">
+                  <TextField fx:id="titre" alignment="TOP_LEFT" HBox.hgrow="ALWAYS">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
@@ -102,7 +101,7 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" style="-fx-spacing: 20;">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Note(s) :" />
-                  <TextArea prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                  <TextArea fx:id="note" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                      <cursor>
                         <Cursor fx:constant="TEXT" />
                      </cursor>
@@ -117,7 +116,7 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" text="OK">
+                  <Button fx:id="validate" disable="true" mnemonicParsing="false" onAction="#submit" text="OK">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

@@ -35,7 +35,6 @@ public class FichierUtils {
                         item.getString("note")
                     )
                 );
-                System.out.println(item);
             }
         }
 
