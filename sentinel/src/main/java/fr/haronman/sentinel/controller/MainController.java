@@ -44,6 +44,18 @@ public class MainController {
     // Si un fichier est ouvert
     public boolean file;
 
+    @FXML
+    private void initialize() {
+        file = false;
+        updateBoutons();
+
+        titre.setCellValueFactory(new PropertyValueFactory<>("titre"));
+        login.setCellValueFactory(new PropertyValueFactory<>("login"));
+        mdp.setCellValueFactory(new PropertyValueFactory<>("mdp"));
+        url.setCellValueFactory(new PropertyValueFactory<>("url"));
+        note.setCellValueFactory(new PropertyValueFactory<>("note"));
+    }
+
     public void openFile() throws IOException {
         FileChooser fc = new FileChooser();
         fc.setTitle("Ouvrir un fichier");
@@ -84,18 +96,6 @@ public class MainController {
 
     public void deleteEntry() {
         System.out.println("TODO Supprimer Entree");
-    }
-
-    @FXML
-    private void initialize() {
-        file = false;
-        updateBoutons();
-
-        titre.setCellValueFactory(new PropertyValueFactory<>("titre"));
-        login.setCellValueFactory(new PropertyValueFactory<>("login"));
-        mdp.setCellValueFactory(new PropertyValueFactory<>("mdp"));
-        url.setCellValueFactory(new PropertyValueFactory<>("url"));
-        note.setCellValueFactory(new PropertyValueFactory<>("note"));
     }
 
     private void updateBoutons() {
